@@ -1,0 +1,31 @@
+header form {
+  max-width: 700px;
+  .input-group-prepend > span {
+    background-color: map-get($color, tertiary);
+    color: map-get($color, white) !important;
+    border-bottom-right-radius: 0;
+    border-top-right-radius: 0;
+    .bi-search::before {
+      margin-bottom: map-get($margin, xs);
+    }
+  }
+  input .form-control {
+    border-radius: 0;
+  }
+  .input-group-append > button {
+    background-color: map-get($color, tertiary);
+    color: map-get($color, white) !important;
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+  }
+}
+.nav-icon::before {
+  margin-bottom: map-get($margin, xs);
+  margin-right:  map-get($margin, xs);
+}
+.active {
+  background-color: map-get($color, tertiary);
+  a {
+    color: map-get($color, white) !important;
+  }
+}
