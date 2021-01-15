@@ -1,7 +1,36 @@
+@font-face {
+  font-family: "SedgwickAve";
+  src: url("../css/font/SedgwickAve-Regular.ttf");
+}
+
+@font-face {
+  font-family: "Montserrat";
+  src: url("../css/font/Montserrat-Regular.ttf");
+}
+
 html, body {
   font-size: map-get($font-size, initial);
+  font-family: map-get($font, secondary);
   .navbar {
     font-weight: map-get($font-weight, lg);
     font-size: map-get($font-size, lg);
+  }
+}
+
+h1, h2 {
+  font-family: map-get($font, primary);
+}
+
+h1 {
+  font-size: map-get($font-size, xxl);
+}
+
+h2 {
+  font-size: map-get($font-size, xl);
+}
+
+@media (max-width: 767px) {
+  h1 {
+    font-size: map-get($font-size, xl);
   }
 }
