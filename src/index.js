@@ -1,4 +1,4 @@
-import retrieveContent from './query.js';
+/* import retrieveContent from './query.js';
 
 async function showContent() {
   try {
@@ -13,4 +13,4 @@ async function showContent() {
   }
 }
 
-showContent();
+showContent(); */

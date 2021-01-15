@@ -1,0 +1,16 @@
+.jumbotron {
+  background: url("../img/nounours.webp") no-repeat;
+  background-size: cover;
+  background-position: 50% 20%;
+  height: map-get($size, xxxl);
+  color: map-get($color, white);
+  h1 {
+    max-width: map-get($size, xxl);
+  }
+}
+
+@media (max-width: 767px) {
+  .jumbotron {
+    height: map-get($size, xxl);
+  }
+}

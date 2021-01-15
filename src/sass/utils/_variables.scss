@@ -1,3 +1,8 @@
+$font: (
+  primary: ("SedgwickAve", "Montserrat", sans-serif),
+  secondary: ("Montserrat", sans-serif)
+);
+
 $color: (
   primary: #F3E9F1,
   secondary:#E88B04,
@@ -8,8 +13,10 @@ $color: (
 
 $font-size: (
   initial: 16px,
-  md: 1rem,
-  lg: 1.2rem
+  xxl: 2rem,
+  xl: 1.5rem,
+  lg: 1.2rem,
+  md: 1rem
 );
 
 $font-weight: (
@@ -19,4 +26,11 @@ $font-weight: (
 
 $margin: (
   xs: 0.2rem
-)
+);
+
+$size: (
+  xxxl: 25rem,
+  xxl: 18rem,
+  xl: 10rem,
+  lg: 3.5rem
+);
