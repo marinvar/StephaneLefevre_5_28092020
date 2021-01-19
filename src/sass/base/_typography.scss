@@ -29,6 +29,14 @@ h2 {
   font-size: map-get($font-size, xl);
 }
 
+h4 {
+  font-size: map-get($font-size, xl);
+}
+
+h5 {
+  font-size: map-get($font-size, lg);
+}
+
 @media (max-width: 767px) {
   h1 {
     font-size: map-get($font-size, xl);

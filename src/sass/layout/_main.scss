@@ -1,16 +1,33 @@
-.jumbotron {
-  background: url("../img/nounours.webp") no-repeat;
-  background-size: cover;
-  background-position: 50% 20%;
-  height: map-get($size, xxxl);
-  color: map-get($color, white);
-  h1 {
-    max-width: map-get($size, xxl);
+/* .homepage { */
+  .jumbotron {
+    background: url("../img/nounours.webp") no-repeat;
+    background-size: cover;
+    background-position: 50% 20%;
+    height: map-get($size, xxxl);
+    color: map-get($color, white);
+    h1 {
+      max-width: map-get($size, xl);
+    }
+  
+  }
+  #articles {
+    background: map-get($color, cards);
+  }
+/* } */
+
+.productDetailsPage {
+  main {
+    a {
+      color: map-get($color, black);
+    }
+  }
+  #productDescription {
+    background: map-get($color, primary);
   }
 }
 
 @media (max-width: 767px) {
   .jumbotron {
-    height: map-get($size, xxl);
+    height: map-get($size, xl);
   }
 }
