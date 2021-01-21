@@ -1,21 +1,19 @@
-/* .homepage { */
-  .jumbotron {
-    background: url("../img/nounours.webp") no-repeat;
-    background-size: cover;
-    background-position: 50% 20%;
-    height: map-get($size, xxxl);
-    color: map-get($color, white);
-    h1 {
-      max-width: map-get($size, xl);
-    }
+.jumbotron {
+  background: url("../img/nounours.webp") no-repeat;
+  background-size: cover;
+  background-position: 50% 20%;
+  height: map-get($size, xxxl);
+  color: map-get($color, white);
+  h1 {
+    max-width: map-get($size, xl);
+  }
   
-  }
-  #articles {
-    background: map-get($color, cards);
-  }
-/* } */
+}
+#articles {
+  background: map-get($color, cards);
+}
 
-.productDetailsPage {
+.product-details-page {
   main {
     a {
       color: map-get($color, black);
@@ -26,8 +24,24 @@
   }
 }
 
+.basket-page {
+  .remove-from-cart {
+    color: map-get($color, white);
+    max-width: 3rem;
+  }
+  hr {
+    height: 0.2rem;
+  }
+}
+
 @media (max-width: 767px) {
   .jumbotron {
     height: map-get($size, xl);
+  }
+}
+
+@media (min-width: 576px) {
+  .img-basket-product {
+    max-width: 12rem;
   }
 }
