@@ -5,6 +5,7 @@ import { addToCartEventListener } from './addListeners';
 import { teddyBears } from './constants';
 import { generateBasket, generateTotalAmount } from './basket';
 import { createDetailsCard, createCards } from './generateCards';
+import { addRegexControls } from './formControls';
 
 
 /**
@@ -68,6 +69,7 @@ const main = () => {
     .then(() => {
       generateBasket();
       generateTotalAmount();
+      addRegexControls();
     });
   }
 }
