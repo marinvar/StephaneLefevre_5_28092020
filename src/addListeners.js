@@ -1,7 +1,7 @@
 import { getBasketFromStorage, storeBasketToStorage, 
   basketAlertMsg, getPriceFromId } from './utilities.js';
 import { basketContent, teddiesBasket } from './constants';
-import { generateBasket } from './basket';
+import {  generateTotalAmount } from './basket';
 
 /**
  * Get basket from localStorage, adds the product to the basket,
@@ -15,7 +15,7 @@ const addToCart = (productId) => {
   basketAlertMsg('success', 'Merci !', 'Votre nouvel ami a été ajouté à votre panier...');
 }
 
-const removeFromCart = (productId) => {
+const removeFromCart = (productId, teddyNumber) => {
   getBasketFromStorage();
   const index = basketContent.indexOf(productId);
   if (index > -1) {
@@ -24,8 +24,11 @@ const removeFromCart = (productId) => {
     teddiesBasket.removePrice(price);
   }
   storeBasketToStorage();
+  let productCard = document.getElementById(teddyNumber).parentElement.parentElement;
+  let articles = document.getElementById('articles-in-basket');
+  articles.removeChild(productCard);
   basketAlertMsg('danger', 'Il est triste !', 'Votre ex nouvel ami a été retiré de votre panier...');
-  generateBasket();
+  generateTotalAmount();
 }
 
 /**
@@ -42,7 +45,7 @@ export const addToCartEventListener = (productId) => {
 
 export const removeFromCartEventListener = (productId, teddyNumber) => {
   const setProductId = () => {
-    removeFromCart(productId);
+    removeFromCart(productId, teddyNumber);
   }
   let button = document.getElementById(teddyNumber);
   button.addEventListener('click', setProductId);
