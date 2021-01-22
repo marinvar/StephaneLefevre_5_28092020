@@ -40,14 +40,44 @@
     <div class="container">
         <main class="row">
             <h1 class="p-3 my-3">Votre panier Orinoco</h1>
+            <!-- Basket display module -->
             <h2 class="p-3">Amis sélectionnés :</h2>
             <section id="articles-in-basket" class="mb-3">
             </section>
             <hr>
             <section id="total-amount" class="my-3 mx-0">
             </section>
+            <!-- End basket display module -->
+
+            <hr>
+
+            <!-- Form display module -->
+            <h2 class="p-3">Vos informations :</h2>
+            <section class="mb-3" id="information">
+                <form action="" onSubmit="validate()">
+                    <label for="first-name" class="form-label mb-0">Prénom</label>
+                    <input type="text" id="first-name" name="firt-name" class="form-control mb-3" pattern="^[a-zA-Z-\s]{1,20}$" required>
+                    
+                    <label for="last-name" class="form-label mb-0">Nom</label>
+                    <input type="text" id="last-name" name="last-name" class="form-control mb-3" pattern="^[a-zA-Z-\s]{1,20}$" required>
+
+                    <label for="address" class="form-label mb-0">Adresse</label>
+                    <input type="text" id="address" name="address" class="form-control mb-3" pattern="^[a-zA-Z0-9-\s,\.]{1,100}$" required>
+
+                    <label for="city" class="form-label mb-0">Ville</label>
+                    <input type="text" id="city" name="city" class="form-control mb-3" pattern="^[a-zA-Z-\s]{1,50}$" required>
+
+                    <label for="email" class="form-label mb-0">Adresse email</label>
+                    <input type="email" id="email" name="email" class="form-control mb-3" required>
+
+                    <button type="submit" class="btn btn-primary">Passer la commande</button>
+                </form>
+            </section>
+            <!-- End form display module -->
         </main>
     </div>
+
+    
     <!-- End Main container -->
 
     <!-- Footer container -->
