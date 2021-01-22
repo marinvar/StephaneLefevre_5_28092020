@@ -1,7 +1,17 @@
 header {
   background-color: map-get($color, primary);
   img {
-    width: map-get($size, xl);
+    width: map-get($size, lg);
+  }
+  .nav-icon::before {
+    margin-bottom: map-get($margin, xs);
+    margin-right:  map-get($margin, xs);
+  }
+  .active {
+    background-color: map-get($color, tertiary);
+    a {
+      color: map-get($color, white) !important;
+    }
   }
   
 }

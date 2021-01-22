@@ -8,7 +8,9 @@ $color: (
   secondary:#E88B04,
   tertiary: #935DC0,
   footer: #252526,
-  white: white
+  white: white,
+  black: black,
+  cards: linear-gradient(#F3E9F1, white)
 );
 
 $font-size: (
@@ -30,7 +32,8 @@ $margin: (
 
 $size: (
   xxxl: 25rem,
-  xxl: 18rem,
-  xl: 10rem,
-  lg: 3.5rem
+  xxl: 20rem,
+  xl: 18rem,
+  lg: 10rem,
+  md: 3.5rem
 );

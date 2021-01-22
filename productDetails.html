@@ -8,9 +8,9 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-giJF6kkoqNQ00vy+HMDP7azOuL0xtbfIcaT9wjKHr8RbDVddVHyTfAAsrekwKmP1" crossorigin="anonymous">
     <link rel="stylesheet" href="src/css/style.css">
 
-    <title>Panier Orinoco</title>
+    <title>Orinoco, détails du produit</title>
 </head>
-<body class="basket-page">    
+<body class="product-details-page">    
     <!-- Header with main navigation menu -->
     <div class="container-fluid">
         <header class="row">
@@ -26,7 +26,7 @@
                         <li class="nav-item">
                             <a href="index.html" class="nav-link"><i class="bi bi-house nav-icon"></i>Accueil</a>
                         </li>
-                        <li class="nav-item active">
+                        <li class="nav-item">
                             <a href="basket.html" class="nav-link"><i class="bi bi-cart3 nav-icon"></i>Panier</a>
                         </li>
                     </ul>
@@ -39,12 +39,26 @@
     <!-- Main container -->
     <div class="container">
         <main class="row">
-            <h1 class="p-3 my-3">Votre panier Orinoco</h1>
-            <h2 class="p-3">Amis sélectionnés :</h2>
-            <section id="articles-in-basket" class="mb-3">
+            <section class="jumbotron">
+                <h1 class="my-2">Orinoco, votre site de commerce en ligne</h1>
             </section>
-            <hr>
-            <section id="total-amount" class="my-3 mx-0">
+            <h2 class="mt-3 mb-5 text-center">La qualité du fait main, la douceur en pluch</h2>
+            <a href="index.html" id="backToProducts" class="p-sm-0 my-3"><i class="bi bi-arrow-left-circle me-2"></i>Retour à la liste des produits</a>
+            <h3 class="p-sm-0 ">Détails du produit:</h3>
+            <section id="productDescription">
+              <article id="teddyCard" class="m-3 card">
+                <figure id="cardFigure" class="card-body figure">
+                  <img src="" alt="" id="cardImg" class="card-img-top figure-img img-fluid" alt="Un ours en peluche fait main">
+                  <h4 id="cardTitle" class="card-title"></h4>
+                  <h5 id="cardPrice"></h5>
+                  <label for="teddyColors">Choisissez une couleur:</label>
+                  <div class="d-flex my-3">
+                    <select name="teddyColors" id="teddyColors" class="form-select me-3"></select>
+                    <button id="add-to-cart" class="btn btn-success ms-auto">Ajouter au panier</button>
+                  </div>
+                  <figcaption id="cardCaption" class="card-text .figure-caption"></figcaption>
+                </figure>
+              </article>
             </section>
         </main>
     </div>
