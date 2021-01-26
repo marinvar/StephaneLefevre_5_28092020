@@ -12,7 +12,7 @@ const addToCart = (productId) => {
   getBasketFromStorage();
   basketContent.push(productId);
   storeBasketToStorage();
-  basketAlertMsg('success', 'Merci !', 'Votre nouvel ami a été ajouté à votre panier...');
+  basketAlertMsg('success', 'Il vous remercie !', 'Votre nouvel ami a été ajouté à votre panier...');
 }
 
 const removeFromCart = (productId, teddyNumber) => {
@@ -27,7 +27,7 @@ const removeFromCart = (productId, teddyNumber) => {
   let productCard = document.getElementById(teddyNumber).parentElement.parentElement;
   let articles = document.getElementById('articles-in-basket');
   articles.removeChild(productCard);
-  basketAlertMsg('danger', 'Il est triste !', 'Votre ex nouvel ami a été retiré de votre panier...');
+  basketAlertMsg('danger', 'Il est triste !', 'Votre ex-nouvel ami a été retiré de votre panier...');
   generateTotalAmount();
 }
 
@@ -35,11 +35,12 @@ const removeFromCart = (productId, teddyNumber) => {
  * Adds click Event Listener to 'Add to cart' button with product id set.
  * @param {string} productId 
  */
-export const addToCartEventListener = (productId) => {
-  const setProductId = () => {
+export const addToCartEventListener = (productId, button) => {
+  const setProductId = (event) => {
+    event.stopPropagation();
+    event.preventDefault();
     addToCart(productId);
   }
-  let button = document.getElementById('add-to-cart');
   button.addEventListener('click', setProductId);
 }
 
@@ -57,7 +58,34 @@ export const removeFromCartEventListener = (productId, teddyNumber) => {
  */
 export const addProductCardListener = (article) => {
   article.addEventListener('click', (event) => {
-    event.stopPropagation();
-    location.href = 'productDetails.html?productId=' + event.target.id;
+    location.href = 'productDetails.html?productId=' + article.id;
+    /* event.stopPropagation();
+    event.preventDefault(); */
   });
+}
+
+export const addRegexControlListener = (element, regX) => {
+  element.addEventListener('input', function (event) {
+    let result = regX.exec(event.target.value);
+    if (result === null) {
+      element.classList.add('is-invalid');
+    } else if (result !== null && element.classList.contains('is-invalid')) {
+      element.classList.remove('is-invalid');
+    }
+  }, false);
+}
+
+export const addValidationListener = () => {
+  orderForm.addEventListener('submit', function (event) {
+    let validation = true;
+    for (let element of elements) {
+      if (element.classList.contains('is-invalid')) {
+        validation = false;
+      }
+    }
+    if (validation === false) {
+      event.preventDefault();
+      event.stopPropagation();
+    }
+  }, false);
 }
