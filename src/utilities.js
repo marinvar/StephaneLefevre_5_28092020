@@ -1,4 +1,4 @@
-import { basketContent, teddyBears } from './constants';
+import { teddyBears } from './constants';
 
 /**
  * With displacement effect, scrolls the page to the concerned product by ID
@@ -24,7 +24,7 @@ export const basketAlertMsg = (msgType, title, message) => {
 }
 
 export const getPriceFromId = (productId) => {
-  let teddyId = teddyBears.findIndex(function(teddy, index) {
+  let teddyId = teddyBears.findIndex(function(teddy) {
     if (teddy.id === productId) return true;
   });
   if (teddyId >= 0) {

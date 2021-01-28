@@ -3,7 +3,7 @@ import TeddyBear from './TeddyBear';
 import { getUrlParamsProductId } from './utilities.js';
 import { addToCartEventListener } from './addListeners';
 import { teddyBears } from './constants';
-import { generateBasket, generateTotalAmount } from './basket';
+import { generateBasket, generateTotalAmount, generateBasketFromStorage } from './basketOperations';
 import { createDetailsCard, createCards } from './generateCards';
 import { addRegexControls } from './formControls';
 
@@ -38,12 +38,10 @@ const showTeddyDetails = async (productId) => {
 const getTeddies = async () => {
   try {
     const teddies = await retrieveTeddies();
-
     for (let teddy of teddies) {
       const teddyBear = new TeddyBear(teddy._id, teddy.name, teddy.colors, teddy.price, teddy.imageUrl, teddy.description);
       teddyBears.push(teddyBear);
     }
-
   } catch (e) {
     console.error('Error during products retrieval or product cards creation', e);
   }
@@ -54,6 +52,7 @@ const getTeddies = async () => {
  */
 const main = () => {
   const classList = document.getElementsByTagName('body')[0].classList;
+  generateBasketFromStorage();
   
   if (classList.contains('homepage')) {
     getTeddies()
@@ -63,7 +62,10 @@ const main = () => {
 
   } else if (classList.contains('product-details-page')) {
     const productId = getUrlParamsProductId()[0];
-    showTeddyDetails(productId);
+    getTeddies()
+    .then(() => {
+      showTeddyDetails(productId);
+    });
 
   } else if (classList.contains('basket-page')) {
     getTeddies()

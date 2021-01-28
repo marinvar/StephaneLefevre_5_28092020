@@ -1,12 +1,12 @@
 import { addRegexControlListener, addValidationListener } from './addListeners';
 
-let orderForm = document.getElementById('order-form');
+export let orderForm = document.getElementById('order-form');
 let firstName = document.getElementById('first-name');
 let lastName = document.getElementById('last-name');
 let address = document.getElementById('address');
 let city = document.getElementById('city');
 let email = document.getElementById('email');
-let elements = [firstName, lastName, address, city, email];
+export let elements = [firstName, lastName, address, city, email];
 
 export const addRegexControls = () => {
   addRegexControlListener(firstName, /^[A-Za-zÀ-ÖØ-öø-ÿ-\s']{1,20}$/);

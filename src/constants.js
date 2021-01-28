@@ -1,5 +1,5 @@
-import BasketAmount from './BasketAmount';
+/* import Basket from './Basket'; */
 
-export let basketContent = [];
+/* export let basketContent = []; */
 export const teddyBears = [];
-export const teddiesBasket = new BasketAmount(0);
+export const teddiesBasket = {};
