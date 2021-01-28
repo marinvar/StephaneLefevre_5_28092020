@@ -32,6 +32,9 @@
   hr {
     height: 0.2rem;
   }
+  .invalid-tooltip, .valid-tooltip {
+    margin-top: -0.8rem;
+  }
 }
 
 @media (max-width: 767px) {
