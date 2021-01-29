@@ -11,9 +11,13 @@ export const addToCartEventListener = (productId, button) => {
   const setProductId = (event) => {
     event.stopPropagation();
     event.preventDefault();
-    console.log(productId);
+    const basketBadge = document.getElementById('basket-count')
+    let basketCount = parseFloat(basketBadge.textContent);
+    basketCount++;
+    basketBadge.textContent = basketCount;
     teddiesBasket.addTeddy(productId, getPriceFromId(productId), 1);
     saveBasketToStorage();
+
     basketAlertMsg('success', 'Il vous remercie !', 'Votre nouvel ami a été ajouté à votre panier...');
 
   }

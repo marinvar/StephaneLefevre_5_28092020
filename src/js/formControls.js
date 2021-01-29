@@ -1,4 +1,5 @@
 import { addRegexControlListener, addValidationListener } from './addListeners';
+import { regxName, regxAddress, regxCity, regxEmail } from './constants';
 
 export let orderForm = document.getElementById('order-form');
 let firstName = document.getElementById('first-name');
@@ -9,11 +10,11 @@ let email = document.getElementById('email');
 export let elements = [firstName, lastName, address, city, email];
 
 export const addRegexControls = () => {
-  addRegexControlListener(firstName, /^[A-Za-zÀ-ÖØ-öø-ÿ-\s']{1,20}$/);
-  addRegexControlListener(lastName, /^[A-Za-zÀ-ÖØ-öø-ÿ-\s']{1,20}$/);
-  addRegexControlListener(address, /^[A-Za-z0-9À-ÖØ-öø-ÿ-\s,\.']{1,100}$/);
-  addRegexControlListener(city, /^[A-Za-zÀ-ÖØ-öø-ÿ-\s']{1,50}$/);
-  addRegexControlListener(email, /^[^\s@]+@[^\s@]+\.[^\s@]+$/);
+  addRegexControlListener(firstName, regxName);
+  addRegexControlListener(lastName, regxName);
+  addRegexControlListener(address, regxAddress);
+  addRegexControlListener(city, regxCity);
+  addRegexControlListener(email, regxEmail);
   addValidationListener();
 }
 

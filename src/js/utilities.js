@@ -46,22 +46,17 @@ export const getUrlParamsProductId = () => {
   return [urlParams.get('productId'), urlParams];
 }
 
-/**
- * Retrieves basket content from localStorage and updates in 'basketContent' array
- */
-export const getBasketFromStorage = () => {
-  let storageCart_json = localStorage.getItem("teddiesCart");
-  if (localStorage.getItem("teddiesCart") !== null) {
-    basketContent = JSON.parse(storageCart_json);
+export const getUrlParamsUser = () => {
+  const queryString = window.location.search;
+  const urlParams = new URLSearchParams(queryString);
+  const user = {
+    firstName: urlParams.get('first-name'),
+    lastName: urlParams.get('last-name'),
+    address: urlParams.get('address'),
+    city: urlParams.get('city'),
+    email: urlParams.get('email')
   }
-}
-
-/**
- * Stores basket content to localStorage
- */
-export const storeBasketToStorage = () => {
-  let storageCart_json = JSON.stringify(basketContent);
-  localStorage.setItem("teddiesCart", storageCart_json);
+  return user;
 }
 
 /**

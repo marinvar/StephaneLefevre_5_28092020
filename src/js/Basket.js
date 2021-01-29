@@ -39,4 +39,8 @@ export default class Basket {
       delete teddies[productId];
     }
   }
+  clearBasket () {
+    this.teddies = {};
+    this.amount = 0;
+  }
 }

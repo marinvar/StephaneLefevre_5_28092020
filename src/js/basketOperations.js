@@ -1,10 +1,9 @@
-import { formatPrice, storeBasketToStorage, 
-  basketAlertMsg, getPriceFromId } from './utilities';
+import { formatPrice, basketAlertMsg, getPriceFromId } from './utilities';
 import { teddiesBasket, teddyBears } from './constants';
 import { removeFromCartEventListener } from './addListeners';
 import BasketAmount from './Basket';
 
-const generateBasketProduct = (teddyId, teddyPrice, teddyQuantity) => {
+export const generateBasketProduct = (teddyId, teddyPrice, teddyQuantity) => {
   const index = teddyBears.findIndex(teddy => teddy.id === teddyId);
   const teddyNumber = 'teddy' + index;
   let teddy = teddyBears[index];
