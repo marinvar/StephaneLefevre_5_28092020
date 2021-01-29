@@ -1,12 +1,12 @@
-import { retrieveTeddies, getTeddyDetails } from './queryTeddies.js';
-import TeddyBear from './TeddyBear';
-import { getUrlParamsProductId } from './utilities.js';
-import { addToCartEventListener } from './addListeners';
-import { teddyBears } from './constants';
-import { generateBasket, generateTotalAmount, generateBasketFromStorage } from './basketOperations';
-import { createDetailsCard, createCards } from './generateCards';
-import { addRegexControls } from './formControls';
-
+import { retrieveTeddies, getTeddyDetails, sendOrder } from './js/queryTeddies.js';
+import TeddyBear from './js/TeddyBear';
+import { getUrlParamsProductId } from './js/utilities.js';
+import { addToCartEventListener } from './js/addListeners';
+import { teddyBears } from './js/constants';
+import { generateBasket, generateTotalAmount, generateBasketFromStorage } from './js/basketOperations';
+import { createDetailsCard, createCards } from './js/generateCards';
+import { addRegexControls } from './js/formControls';
+import { generateOrderList, setUser } from './js/orderOperations';
 
 /**
  * Creates details for card template with product details and options,
@@ -73,6 +73,15 @@ const main = () => {
       generateBasket();
       generateTotalAmount();
       addRegexControls();
+    });
+  } else if (classList.contains('order-page')) {
+    getTeddies()
+    .then(() => {
+      const teddies = generateOrderList();
+      const user = setUser();
+      if (teddies.length > 0) {
+        sendOrder (teddies, user);
+      }
     });
   }
 }
