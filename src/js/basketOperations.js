@@ -48,6 +48,11 @@ export const generateBasketProduct = (teddyId, teddyPrice, teddyQuantity) => {
   return article;
 }
 
+export const updateBasketBadge = () => {
+    const basketBadge = document.getElementById('basket-count');
+  basketBadge.textContent = teddiesBasket.getProductsQuantity();
+}
+
 export const generateBasketFromStorage = () => {
   let storageCart_json = localStorage.getItem("teddiesCartBasket");
   const basket = JSON.parse(storageCart_json);

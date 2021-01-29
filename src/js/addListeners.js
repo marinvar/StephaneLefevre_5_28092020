@@ -1,4 +1,4 @@
-import { generateBasket, generateTotalAmount, saveBasketToStorage } from './basketOperations';
+import { generateBasket, generateTotalAmount, saveBasketToStorage, updateBasketBadge } from './basketOperations';
 import { teddiesBasket } from './constants';
 import { orderForm, elements } from './formControls';
 import { getPriceFromId, basketAlertMsg } from './utilities';
@@ -11,12 +11,9 @@ export const addToCartEventListener = (productId, button) => {
   const setProductId = (event) => {
     event.stopPropagation();
     event.preventDefault();
-    const basketBadge = document.getElementById('basket-count')
-    let basketCount = parseFloat(basketBadge.textContent);
-    basketCount++;
-    basketBadge.textContent = basketCount;
     teddiesBasket.addTeddy(productId, getPriceFromId(productId), 1);
     saveBasketToStorage();
+    updateBasketBadge();
 
     basketAlertMsg('success', 'Il vous remercie !', 'Votre nouvel ami a été ajouté à votre panier...');
 
@@ -30,6 +27,7 @@ export const removeFromCartEventListener = (productId, teddyNumber) => {
     generateBasket();
     saveBasketToStorage();
     generateTotalAmount();
+    updateBasketBadge();
     basketAlertMsg('danger', 'Il est triste !', 'Votre ex-nouvel ami a été retiré de votre panier...');
   }
   let button = document.getElementById(teddyNumber);

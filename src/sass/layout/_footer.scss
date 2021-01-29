@@ -1,4 +1,6 @@
 footer {
   background-color: map-get($color, footer);
-  color: map-get($color, white);
+  a, a:hover, p {
+    color: map-get($color, white);
+  }
 }
