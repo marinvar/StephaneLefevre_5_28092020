@@ -3,7 +3,7 @@ import TeddyBear from './js/TeddyBear';
 import { getUrlParamsProductId } from './js/utilities.js';
 import { addToCartEventListener } from './js/addListeners';
 import { teddyBears } from './js/constants';
-import { generateBasket, generateTotalAmount, generateBasketFromStorage } from './js/basketOperations';
+import { generateBasket, generateTotalAmount, generateBasketFromStorage, updateBasketBadge } from './js/basketOperations';
 import { createDetailsCard, createCards } from './js/generateCards';
 import { addRegexControls } from './js/formControls';
 import { generateOrderList, setUser } from './js/orderOperations';
@@ -42,6 +42,7 @@ const getTeddies = async () => {
       const teddyBear = new TeddyBear(teddy._id, teddy.name, teddy.colors, teddy.price, teddy.imageUrl, teddy.description);
       teddyBears.push(teddyBear);
     }
+    updateBasketBadge();
   } catch (e) {
     console.error('Error during products retrieval or product cards creation', e);
   }

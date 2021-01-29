@@ -17,6 +17,14 @@ export default class Basket {
     }
     return price;
   }
+  getProductsQuantity() {
+    let quantity = 0;
+    for (const product of Object.values(this.teddies)) {
+      quantity += product.quantity;
+    }
+    return quantity;
+  }
+
   getTeddies () {
     return this.teddies;
   }
