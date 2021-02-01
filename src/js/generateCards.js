@@ -148,9 +148,9 @@ export const generateOrderProduct = (teddyId, teddyPrice, teddyQuantity) => {
 export const generateUserInfo = (user, orderId, totalAmount) => {
   const article = document.createElement('div');
   article.innerHTML = "<p>Merci <strong>" + user.firstName + " " + user.lastName + 
-  "</strong>, votre commande a été validée.</p><p>Elle porte désormais le charmant petit nom de : <strong>" + 
-  orderId + "</strong>.</p><p>Elle vous sera livrée sous 12 mois dans les plus brefs délais à l'adresse :</p>"
-   + "<p><strong>" + user.address + "</strong>, dans le joli village de <strong>" + user.city
+  "</strong>, votre commande a été validée.</p><p>Elle porte la référence : <strong>" + 
+  orderId + "</strong>.</p><p>Elle vous sera livrée dans les plus brefs délais à l'adresse :</p>"
+   + "<p><strong>" + user.address + "</strong>, à <strong>" + user.city
    + "</strong>.</p><p>Vous faire de nouveaux amis vous aura coûté <strong>" + totalAmount + "</strong> au total.</p>";
 
   return article;
