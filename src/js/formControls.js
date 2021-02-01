@@ -9,6 +9,9 @@ let city = document.getElementById('city');
 let email = document.getElementById('email');
 export let elements = [firstName, lastName, address, city, email];
 
+/**
+ * Adds regex controls to each input element of the order form, and the submit validation control to the form itself.
+ */
 export const addRegexControls = () => {
   addRegexControlListener(firstName, regxName);
   addRegexControlListener(lastName, regxName);

@@ -1,5 +1,5 @@
 /**
- * Represents the total basket price
+ * Represents the basket itself.
  * @constructor
  * @param {integer} initialAmount - The initial price of articles contained in the basket
  * @param {object} teddies - An object containing each teddy object with price and quantity

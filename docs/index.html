@@ -1,0 +1,2664 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset='utf-8'>
+  <title>Orinoco 1.0.0 | Documentation</title>
+  <meta name='description' content='Site de vente en ligne d&#39;ours en peluche'>
+  <meta name='viewport' content='width=device-width,initial-scale=1'>
+  <link href='assets/bass.css' rel='stylesheet'>
+  <link href='assets/style.css' rel='stylesheet'>
+  <link href='assets/github.css' rel='stylesheet'>
+  <link href='assets/split.css' rel='stylesheet'>
+</head>
+<body class='documentation m0'>
+    <div class='flex'>
+      <div id='split-left' class='overflow-auto fs0 height-viewport-100'>
+        <div class='py1 px2'>
+          <h3 class='mb0 no-anchor'>Orinoco</h3>
+          <div class='mb1'><code>1.0.0</code></div>
+          <input
+            placeholder='Filter'
+            id='filter-input'
+            class='col12 block input'
+            type='text' />
+          <div id='toc'>
+            <ul class='list-reset h5 py1-ul'>
+              
+                
+                <li><a
+                  href='#showteddydetails'
+                  class="">
+                  showTeddyDetails
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getteddies'
+                  class="">
+                  getTeddies
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#main'
+                  class="">
+                  main
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#addtocarteventlistener'
+                  class="">
+                  addToCartEventListener
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#removefromcarteventlistener'
+                  class="">
+                  removeFromCartEventListener
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#addproductcardlistener'
+                  class="">
+                  addProductCardListener
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#addregexcontrollistener'
+                  class="">
+                  addRegexControlListener
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#addvalidationlistener'
+                  class="">
+                  addValidationListener
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#basket'
+                  class="">
+                  Basket
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#generatebasketproduct'
+                  class="">
+                  generateBasketProduct
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#updatebasketbadge'
+                  class="">
+                  updateBasketBadge
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#generatebasketfromstorage'
+                  class="">
+                  generateBasketFromStorage
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#savebaskettostorage'
+                  class="">
+                  saveBasketToStorage
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#generatebasket'
+                  class="">
+                  generateBasket
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#generatetotalamount'
+                  class="">
+                  generateTotalAmount
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#addregexcontrols'
+                  class="">
+                  addRegexControls
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#createdetailscard'
+                  class="">
+                  createDetailsCard
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#createproductcard'
+                  class="">
+                  createProductCard
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#createcards'
+                  class="">
+                  createCards
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#generateorderproduct'
+                  class="">
+                  generateOrderProduct
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#generateuserinfo'
+                  class="">
+                  generateUserInfo
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#generateorderlist'
+                  class="">
+                  generateOrderList
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#setuser'
+                  class="">
+                  setUser
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#generateteddiesorderresult'
+                  class="">
+                  generateTeddiesOrderResult
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#displayorder'
+                  class="">
+                  displayOrder
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#retrieveteddies'
+                  class="">
+                  retrieveTeddies
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getteddydetails'
+                  class="">
+                  getTeddyDetails
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#sendorder'
+                  class="">
+                  sendOrder
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#teddybear'
+                  class="">
+                  TeddyBear
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#scrolltoproduct'
+                  class="">
+                  scrollToProduct
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#basketalertmsg'
+                  class="">
+                  basketAlertMsg
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#getpricefromid'
+                  class="">
+                  getPriceFromId
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#formatprice'
+                  class="">
+                  formatPrice
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#geturlparamsproductid'
+                  class="">
+                  getUrlParamsProductId
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#geturlparamsuser'
+                  class="">
+                  getUrlParamsUser
+                  
+                </a>
+                
+                </li>
+              
+                
+                <li><a
+                  href='#needtoscroll'
+                  class="">
+                  needToScroll
+                  
+                </a>
+                
+                </li>
+              
+            </ul>
+          </div>
+          <div class='mt1 h6 quiet'>
+            <a href='https://documentation.js.org/reading-documentation.html'>Need help reading this?</a>
+          </div>
+        </div>
+      </div>
+      <div id='split-right' class='relative overflow-auto height-viewport-100'>
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='showteddydetails'>
+      showTeddyDetails
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Creates details for card template with product details and options,
+and a link to go back to products list with scrollTo ability</p>
+
+    <div class='pre p1 fill-light mt0'>showTeddyDetails</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>productId</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    ID of the product from which to get details
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getteddies'>
+      getTeddies
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>On page loading, waiting for teddies list download to create teddies class instances and display cards</p>
+
+    <div class='pre p1 fill-light mt0'>getTeddies</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='main'>
+      main
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>When loading page, tests if page is products list, product detail or basket page to download right data</p>
+
+    <div class='pre p1 fill-light mt0'>main</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='addtocarteventlistener'>
+      addToCartEventListener
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Adds click Event Listener to 'Add to cart' button with product id set.</p>
+
+    <div class='pre p1 fill-light mt0'>addToCartEventListener</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>productId</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    ID of the product to add to cart
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>button</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='removefromcarteventlistener'>
+      removeFromCartEventListener
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Adds event listener to trash button on individual product card in basket.</p>
+
+    <div class='pre p1 fill-light mt0'>removeFromCartEventListener</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>productId</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    ID of the product to remove from cart
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>teddyNumber</span> <code class='quiet'>(integer)</code>
+	    ID of the product card where to add the listener
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='addproductcardlistener'>
+      addProductCardListener
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Adds the Event Listener to a product card to be clickable and redirects to product details page.</p>
+
+    <div class='pre p1 fill-light mt0'>addProductCardListener</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>article</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='addregexcontrollistener'>
+      addRegexControlListener
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Adds listener to an input DOM element to check compliance with a regex string.</p>
+
+    <div class='pre p1 fill-light mt0'>addRegexControlListener</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>element</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>regX</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='addvalidationlistener'>
+      addValidationListener
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Adds event listener to a form to verify if all inputs are valid before submitting</p>
+
+    <div class='pre p1 fill-light mt0'>addValidationListener</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='basket'>
+      Basket
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Represents the basket itself.</p>
+
+    <div class='pre p1 fill-light mt0'>new Basket(initialAmount: integer, teddies: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>initialAmount</span> <code class='quiet'>(integer
+            = <code>0</code>)</code>
+	    The initial price of articles contained in the basket
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>teddies</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>
+            = <code>{}</code>)</code>
+	    An object containing each teddy object with price and quantity
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='generatebasketproduct'>
+      generateBasketProduct
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Creates a DOM element containing, name, description, price and color of the product to appear in the basket.</p>
+
+    <div class='pre p1 fill-light mt0'>generateBasketProduct</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>teddyId</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    ID of the product to display
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>teddyPrice</span> <code class='quiet'>(integer)</code>
+	    price of a single unity of the product
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>teddyQuantity</span> <code class='quiet'>(integer)</code>
+	    quantity of articles of this product
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='updatebasketbadge'>
+      updateBasketBadge
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Updates the quantity in the basket badge near basket button in the nav menu with quantity of products held in the basket.</p>
+
+    <div class='pre p1 fill-light mt0'>updateBasketBadge</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='generatebasketfromstorage'>
+      generateBasketFromStorage
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Generates the basket instance of Basket class with basket info(id, quantity, price) held in localStorage.</p>
+
+    <div class='pre p1 fill-light mt0'>generateBasketFromStorage</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='savebaskettostorage'>
+      saveBasketToStorage
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Stores basket content from basket instance to localStorage.</p>
+
+    <div class='pre p1 fill-light mt0'>saveBasketToStorage</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='generatebasket'>
+      generateBasket
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>generates the whole basket content elements from products held in the basket instance.</p>
+
+    <div class='pre p1 fill-light mt0'>generateBasket</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='generatetotalamount'>
+      generateTotalAmount
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Generates the total amount card in the basket page with total price.</p>
+
+    <div class='pre p1 fill-light mt0'>generateTotalAmount</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='addregexcontrols'>
+      addRegexControls
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Adds regex controls to each input element of the order form, and the submit validation control to the form itself.</p>
+
+    <div class='pre p1 fill-light mt0'>addRegexControls</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='createdetailscard'>
+      createDetailsCard
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Adds product details to the product details card.</p>
+
+    <div class='pre p1 fill-light mt0'>createDetailsCard</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>teddyBear</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='createproductcard'>
+      createProductCard
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Creates a product card DOM object to insert in home page.</p>
+
+    <div class='pre p1 fill-light mt0'>createProductCard</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>teddy</span> <code class='quiet'>(any)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>any</code>:
+        DOM element to insert in page
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='createcards'>
+      createCards
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>creates a new card for each product
+then adds it to the products display container</p>
+
+    <div class='pre p1 fill-light mt0'>createCards</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='generateorderproduct'>
+      generateOrderProduct
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Generates a product card in the order page.</p>
+
+    <div class='pre p1 fill-light mt0'>generateOrderProduct</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>teddyId</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    ID of the product to display in the order
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>teddyPrice</span> <code class='quiet'>(integer)</code>
+	    Price of a single article of the product
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>teddyQuantity</span> <code class='quiet'>(integer)</code>
+	    quantity of products to put in order
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>any</code>:
+        DOM element to insert in page
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='generateuserinfo'>
+      generateUserInfo
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Generates DOM element containing validated order text to insert in order page once order validated by server.</p>
+
+    <div class='pre p1 fill-light mt0'>generateUserInfo</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>user</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+	    Information about the user sending the order
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>orderId</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    ID of the order passed to the server
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>totalAmount</span> <code class='quiet'>(integer)</code>
+	    the total amount of the order
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>any</code>:
+        DOM element to insert in page
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='generateorderlist'>
+      generateOrderList
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Generates the list of items validated in the order and received by server.</p>
+
+    <div class='pre p1 fill-light mt0'>generateOrderList</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
+        list of products validated with their information
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='setuser'>
+      setUser
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Checking user information transmitted in URL, to send to the server with the order if everything is valid.</p>
+
+    <div class='pre p1 fill-light mt0'>setUser</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>:
+        user information, sets an error phrase in order page otherwise
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='generateteddiesorderresult'>
+      generateTeddiesOrderResult
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Generates object containing validated products.</p>
+
+    <div class='pre p1 fill-light mt0'>generateTeddiesOrderResult</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>products</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    array of products validated in the order
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>:
+        products validated in order
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='displayorder'>
+      displayOrder
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Displays the order validated by server on the order page, with user, order and products information.</p>
+
+    <div class='pre p1 fill-light mt0'>displayOrder</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>order</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+	    object containing whole order validated by server, with user info, order ID and products info
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='retrieveteddies'>
+      retrieveTeddies
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Get available products information from the server.</p>
+
+    <div class='pre p1 fill-light mt0'>retrieveTeddies(): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a></code>:
+        Array of objects containing products information
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getteddydetails'>
+      getTeddyDetails
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Retrieve information about a specific product from the server, by product ID.</p>
+
+    <div class='pre p1 fill-light mt0'>getTeddyDetails(productId: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>): <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>productId</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    The ID of the product to get information about
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>:
+        available product information
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='sendorder'>
+      sendOrder
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Sends the order to the server and retrieves response with order information, then displays result.</p>
+
+    <div class='pre p1 fill-light mt0'>sendOrder(teddies: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, user: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>teddies</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    Array of products IDs to order
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>user</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a>)</code>
+	    object containing user information
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='teddybear'>
+      TeddyBear
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Represents a TeddyBear</p>
+
+    <div class='pre p1 fill-light mt0'>new TeddyBear(id: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, name: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>, colors: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>, price: integer, imageUrl: <a href="https://developer.mozilla.org/docs/Web/API/URL/URL">url</a>, description: <a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>id</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    The ID of the bear
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>name</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    The name of the bear
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>colors</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Array">Array</a>)</code>
+	    An array of colors strings
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>price</span> <code class='quiet'>(integer)</code>
+	    The bear's price in cents
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>imageUrl</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/API/URL/URL">url</a>)</code>
+	    The url of the picture of the bear
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>description</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    The description of the bear
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='scrolltoproduct'>
+      scrollToProduct
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>With displacement effect, add scrolling feature on the page to go to the concerned product.</p>
+
+    <div class='pre p1 fill-light mt0'>scrollToProduct</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>productId</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    The anchor where to scroll the page to
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='basketalertmsg'>
+      basketAlertMsg
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Defines a messageBox to display an alert.</p>
+
+    <div class='pre p1 fill-light mt0'>basketAlertMsg</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>msgType</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    A string defining the color of the box. Can be either: success, danger, warning, info, primary, secondary, light or dark.
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>title</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    A string displayed in bold style on first line
+
+          </div>
+          
+        </div>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>message</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    A description message for the messageBox
+
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='getpricefromid'>
+      getPriceFromId
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Indicates the single price of a product, by ID, if exists or 0 instead.</p>
+
+    <div class='pre p1 fill-light mt0'>getPriceFromId</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>productId</span> <code class='quiet'>(<a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a>)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code>integer</code>:
+        price of the product
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='formatprice'>
+      formatPrice
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Formats price in cents to price in euros with monetary symbol.</p>
+
+    <div class='pre p1 fill-light mt0'>formatPrice</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+    <div class='py1 quiet mt1 prose-big'>Parameters</div>
+    <div class='prose'>
+      
+        <div class='space-bottom0'>
+          <div>
+            <span class='code bold'>price</span> <code class='quiet'>(integer)</code>
+	    
+          </div>
+          
+        </div>
+      
+    </div>
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+        formatted price
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='geturlparamsproductid'>
+      getUrlParamsProductId
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Retrieves the product ID contained in page address.</p>
+
+    <div class='pre p1 fill-light mt0'>getUrlParamsProductId</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/String">string</a></code>:
+        the ID of the product
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='geturlparamsuser'>
+      getUrlParamsUser
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Retrieves user data contained in the page address.</p>
+
+    <div class='pre p1 fill-light mt0'>getUrlParamsUser</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+    
+      <div class='py1 quiet mt1 prose-big'>Returns</div>
+      <code><a href="https://developer.mozilla.org/docs/Web/JavaScript/Reference/Global_Objects/Object">object</a></code>:
+        user information
+
+      
+    
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+          
+          <section class='p2 mb2 clearfix bg-white minishadow'>
+
+  
+  <div class='clearfix'>
+    
+    <h3 class='fl m0' id='needtoscroll'>
+      needToScroll
+    </h3>
+    
+    
+  </div>
+  
+
+  <p>Checks if a product detail was displayed, and if so, scrolls to this product on home page.</p>
+
+    <div class='pre p1 fill-light mt0'>needToScroll</div>
+  
+  
+
+  
+  
+  
+  
+  
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+
+  
+</section>
+
+          
+        
+      </div>
+    </div>
+  <script src='assets/anchor.js'></script>
+  <script src='assets/split.js'></script>
+  <script src='assets/site.js'></script>
+</body>
+</html>

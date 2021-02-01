@@ -3,6 +3,13 @@ import { teddiesBasket, teddyBears } from './constants';
 import { removeFromCartEventListener } from './addListeners';
 import BasketAmount from './Basket';
 
+/**
+ * Creates a DOM element containing, name, description, price and color of the product to appear in the basket.
+ * @param {string} teddyId - ID of the product to display
+ * @param {integer} teddyPrice - price of a single unity of the product
+ * @param {integer} teddyQuantity - quantity of articles of this product
+ * @returns {DOM element} article DOM element containing the product information
+ */
 export const generateBasketProduct = (teddyId, teddyPrice, teddyQuantity) => {
   const index = teddyBears.findIndex(teddy => teddy.id === teddyId);
   const teddyNumber = 'teddy' + index;
@@ -48,11 +55,17 @@ export const generateBasketProduct = (teddyId, teddyPrice, teddyQuantity) => {
   return article;
 }
 
+/**
+ * Updates the quantity in the basket badge near basket button in the nav menu with quantity of products held in the basket.
+ */
 export const updateBasketBadge = () => {
     const basketBadge = document.getElementById('basket-count');
   basketBadge.textContent = teddiesBasket.getProductsQuantity();
 }
 
+/**
+ * Generates the basket instance of Basket class with basket info(id, quantity, price) held in localStorage.
+ */
 export const generateBasketFromStorage = () => {
   let storageCart_json = localStorage.getItem("teddiesCartBasket");
   const basket = JSON.parse(storageCart_json);
@@ -68,13 +81,16 @@ export const generateBasketFromStorage = () => {
 }
 
 /**
- * Stores basket content to localStorage
+ * Stores basket content from basket instance to localStorage.
  */
 export const saveBasketToStorage = () => {
   let storageCart_json = JSON.stringify(teddiesBasket.getTeddies());
   localStorage.setItem("teddiesCartBasket", storageCart_json);
 }
 
+/**
+ * generates the whole basket content elements from products held in the basket instance.
+ */
 export const generateBasket = () => {
   const teddies = teddiesBasket.getTeddies();
   let articlesInBasket = document.getElementById('articles-in-basket');
@@ -91,7 +107,9 @@ export const generateBasket = () => {
   }
 }
 
-
+/**
+ * Generates the total amount card in the basket page with total price.
+ */
 export const generateTotalAmount = () => {
   let total = document.createElement('article');
   total.classList.add('row','my-3','mx-0','p-0');
@@ -115,19 +133,4 @@ export const generateTotalAmount = () => {
   let totalAmount = document.getElementById('total-amount');
   totalAmount.innerHTML = "";
   totalAmount.appendChild(total);
-}
-
-export const removeFromCart = (productId, teddyNumber) => {
-  const index = basketContent.indexOf(productId);
-  if (index > -1) {
-    basketContent.splice(index, 1);
-    const price = getPriceFromId(productId);
-    teddiesBasket.removePrice(price);
-  }
-  storeBasketToStorage();
-  let productCard = document.getElementById(teddyNumber).parentElement.parentElement;
-  let articles = document.getElementById('articles-in-basket');
-  articles.removeChild(productCard);
-  basketAlertMsg('danger', 'Il est triste !', 'Votre ex-nouvel ami a été retiré de votre panier...');
-  generateTotalAmount();
 }

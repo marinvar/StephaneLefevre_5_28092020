@@ -3,7 +3,7 @@ import { addProductCardListener, addToCartEventListener } from './addListeners';
 import { teddyBears } from './constants';
 
 /**
- * A product details object with which create a product details card
+ * Adds product details to the product details card.
  * @param {TeddyBear class instance} teddyBear - A class instance of TeddyBear
  */
 export const createDetailsCard = (teddyBear) => {
@@ -31,8 +31,9 @@ export const createDetailsCard = (teddyBear) => {
 }
 
 /**
- * Creates a product card DOM object to insert in home page
+ * Creates a product card DOM object to insert in home page.
  * @param {TeddyBear class instance} teddy - A class instance of TeddyBear
+ * @returns DOM element to insert in page
  */
 const createProductCard = (teddy) => {
   const article = document.createElement('article');
@@ -98,6 +99,13 @@ export const createCards = () => {
   }
 }
 
+/**
+ * Generates a product card in the order page.
+ * @param {string} teddyId - ID of the product to display in the order
+ * @param {integer} teddyPrice - Price of a single article of the product
+ * @param {integer} teddyQuantity - quantity of products to put in order
+ * @returns DOM element to insert in page
+ */
 export const generateOrderProduct = (teddyId, teddyPrice, teddyQuantity) => {
   const index = teddyBears.findIndex(teddy => teddy.id === teddyId);
   const teddy = teddyBears[index];
@@ -130,6 +138,13 @@ export const generateOrderProduct = (teddyId, teddyPrice, teddyQuantity) => {
   return article;
 }
 
+/**
+ * Generates DOM element containing validated order text to insert in order page once order validated by server.
+ * @param {object} user - Information about the user sending the order
+ * @param {string} orderId - ID of the order passed to the server
+ * @param {integer} totalAmount - the total amount of the order
+ * @returns DOM element to insert in page
+ */
 export const generateUserInfo = (user, orderId, totalAmount) => {
   const article = document.createElement('div');
   article.innerHTML = "<p>Merci <strong>" + user.firstName + " " + user.lastName + 

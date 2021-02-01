@@ -4,8 +4,8 @@
  * @param {string} id - The ID of the bear
  * @param {string} name - The name of the bear
  * @param {Array} colors - An array of colors strings
- * @param {price} integer - The bear's price in cents
- * @param {imageUrl} url - The url of the picture of the bear
+ * @param {integer} price - The bear's price in cents
+ * @param {url} imageUrl - The url of the picture of the bear
  * @param {string} description - The description of the bear
  */
 class TeddyBear  {

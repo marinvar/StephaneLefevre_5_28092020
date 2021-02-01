@@ -1,7 +1,7 @@
 {
-  "name": "js_webpack",
+  "name": "Orinoco",
   "version": "1.0.0",
-  "description": "cours js webpack",
+  "description": "Site de vente en ligne d'ours en peluche",
   "private": true,
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",

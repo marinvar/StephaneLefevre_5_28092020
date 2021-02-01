@@ -11,7 +11,7 @@ import { generateOrderList, setUser } from './js/orderOperations';
 /**
  * Creates details for card template with product details and options,
  * and a link to go back to products list with scrollTo ability
- * @param {string} productId 
+ * @param {string} productId - ID of the product from which to get details
  */
 const showTeddyDetails = async (productId) => {
   try {

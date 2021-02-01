@@ -3,6 +3,10 @@ import { getUrlParamsUser, formatPrice } from "./utilities";
 import { generateOrderProduct, generateUserInfo } from './generateCards';
 import { saveBasketToStorage } from "./basketOperations";
 
+/**
+ * Generates the list of items validated in the order and received by server.
+ * @returns {Array} list of products validated with their information
+ */
 export const generateOrderList = () => {
   const teddiesList = [];
   const teddies = teddiesBasket.getTeddies();
@@ -14,6 +18,10 @@ export const generateOrderList = () => {
   return teddiesList;
 }
 
+/**
+ * Checking user information transmitted in URL, to send to the server with the order if everything is valid.
+ * @returns {object} user information, sets an error phrase in order page otherwise
+ */
 export const setUser = () => {
   const user = getUrlParamsUser();
   let allValid = true;
@@ -49,6 +57,11 @@ export const setUser = () => {
   }
 }
 
+/**
+ * Generates object containing validated products.
+ * @param {Array} products - array of products validated in the order
+ * @returns {object} products validated in order
+ */
 const generateTeddiesOrderResult = (products) => {
   const teddies = {};
   for (let product of products) {
@@ -66,6 +79,10 @@ const generateTeddiesOrderResult = (products) => {
   return teddies;
 }
 
+/**
+ * Displays the order validated by server on the order page, with user, order and products information.
+ * @param {object} order - object containing whole order validated by server, with user info, order ID and products info 
+ */
 export const displayOrder = (order) => {
   const contact = order.contact;
   const products = order.products;

@@ -5,7 +5,7 @@ import { getPriceFromId, basketAlertMsg } from './utilities';
 
 /**
  * Adds click Event Listener to 'Add to cart' button with product id set.
- * @param {string} productId 
+ * @param {string} productId - ID of the product to add to cart
  */
 export const addToCartEventListener = (productId, button) => {
   const setProductId = (event) => {
@@ -21,6 +21,11 @@ export const addToCartEventListener = (productId, button) => {
   button.addEventListener('click', setProductId);
 }
 
+/**
+ * Adds event listener to trash button on individual product card in basket.
+ * @param {string} productId - ID of the product to remove from cart
+ * @param {integer} teddyNumber - ID of the product card where to add the listener
+ */
 export const removeFromCartEventListener = (productId, teddyNumber) => {
   const setProductId = () => {
     teddiesBasket.removeTeddy(productId);
@@ -35,8 +40,8 @@ export const removeFromCartEventListener = (productId, teddyNumber) => {
 }
 
 /**
- * Adds the Event Listener to a product card to be clickable and redirects to product details page
- * @param {DOM 'article' element} article 
+ * Adds the Event Listener to a product card to be clickable and redirects to product details page.
+ * @param {DOM element} article - An article DOM element to add listener to
  */
 export const addProductCardListener = (article) => {
   article.addEventListener('click', (event) => {
@@ -44,6 +49,11 @@ export const addProductCardListener = (article) => {
   });
 }
 
+/**
+ * Adds listener to an input DOM element to check compliance with a regex string.
+ * @param {DOM input element} element - element on which to add the regex control listener
+ * @param {regex string} regex - The regex to string to match content of the input with 
+ */
 export const addRegexControlListener = (element, regX) => {
   element.addEventListener('input', function (event) {
     let result = regX.exec(event.target.value);
@@ -55,6 +65,9 @@ export const addRegexControlListener = (element, regX) => {
   }, false);
 }
 
+/**
+ * Adds event listener to a form to verify if all inputs are valid before submitting
+ */
 export const addValidationListener = () => {
   orderForm.addEventListener('submit', function (event) {
     let validation = true;
