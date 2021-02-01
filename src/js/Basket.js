@@ -6,7 +6,11 @@
  */
 export default class Basket {
   constructor (initialAmount = 0, teddies = {}) {
-    this.amount = initialAmount;
+    if (parseFloat(initialAmount) >= 0) {
+      this.amount = initialAmount;
+    } else {
+      this.amount = 0;
+    }
     this.teddies = teddies;
   }
 
@@ -17,6 +21,7 @@ export default class Basket {
     }
     return price;
   }
+
   getProductsQuantity() {
     let quantity = 0;
     for (const product of Object.values(this.teddies)) {
@@ -28,18 +33,20 @@ export default class Basket {
   getTeddies () {
     return this.teddies;
   }
+
   addTeddy (productId, price, quantity) {
     const teddies = this.teddies;
     const indexFound = Object.keys(teddies).indexOf(productId);
-    if (indexFound === -1) {
+    if (indexFound === -1 && quantity > 0) {
       teddies[productId] = {
         price: price,
         quantity: quantity
       }
-    } else {
+    } else if (indexFound > -1 && quantity >= 0) {
       teddies[productId].quantity += quantity;
     }
   }
+
   removeTeddy (productId) {
     const teddies = this.teddies;
     const indexFound = Object.keys(teddies).indexOf(productId);
@@ -47,6 +54,7 @@ export default class Basket {
       delete teddies[productId];
     }
   }
+
   clearBasket () {
     this.teddies = {};
     this.amount = 0;

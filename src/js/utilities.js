@@ -79,8 +79,8 @@ export const getUrlParamsUser = () => {
 export const needToScroll = () => {
   const productId = getUrlParamsProductId()[0];
   const urlParams = getUrlParamsProductId()[1];
-  urlParams.delete('productId');
   if (productId !== null) {
+    urlParams.delete('productId');
     window.history.replaceState(null, null, window.location.pathname);
     scrollToProduct(productId);
   }

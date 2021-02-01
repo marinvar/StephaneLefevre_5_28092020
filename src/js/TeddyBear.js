@@ -13,7 +13,7 @@ class TeddyBear  {
     this.id = id,
     this.name = name,
     this.colors = colors,
-    this.price = price,
+    this.price = parseFloat(price) > 0 ? price : 0,
     this.imageUrl = imageUrl,
     this.description = description
   }
