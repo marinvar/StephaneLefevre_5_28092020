@@ -1,7 +1,7 @@
 import { teddiesBasket, regxName, regxAddress, regxCity, regxEmail } from "./constants";
 import { getUrlParamsUser, formatPrice } from "./utilities";
 import { generateOrderProduct, generateUserInfo } from './generateCards';
-import { saveBasketToStorage } from "./basketOperations";
+import { saveBasketToStorage, updateBasketBadge } from "./basketOperations";
 
 /**
  * Generates the list of items validated in the order and received by server.
@@ -104,4 +104,5 @@ export const displayOrder = (order) => {
   userInfo.appendChild(userDetails);
   teddiesBasket.clearBasket();
   saveBasketToStorage();
+  updateBasketBadge();
 }

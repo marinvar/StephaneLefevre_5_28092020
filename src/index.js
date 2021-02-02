@@ -21,7 +21,7 @@ const showTeddyDetails = async (productId) => {
 
     /* creates card details and adds listener */
     createDetailsCard(teddyBear);
-    let button = document.getElementById('add-to-cart');
+    const button = document.getElementById('add-to-cart');
     addToCartEventListener(teddyBear.id, button);
 
     /* creates back link details for scrollTo feature on home page */

@@ -29,7 +29,7 @@ export const basketAlertMsg = (msgType, title, message) => {
  * @returns {integer} price of the product
  */
 export const getPriceFromId = (productId) => {
-  let teddyId = teddyBears.findIndex(function(teddy) {
+  const teddyId = teddyBears.findIndex(function(teddy) {
     if (teddy.id === productId) return true;
   });
   if (teddyId >= 0) {

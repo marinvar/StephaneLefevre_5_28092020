@@ -13,24 +13,24 @@ import BasketAmount from './Basket';
 export const generateBasketProduct = (teddyId, teddyPrice, teddyQuantity) => {
   const index = teddyBears.findIndex(teddy => teddy.id === teddyId);
   const teddyNumber = 'teddy' + index;
-  let teddy = teddyBears[index];
-  let article = document.createElement('article');
+  const teddy = teddyBears[index];
+  const article = document.createElement('article');
   article.classList.add('card','my-3','btn-group');
 
-  let container = document.createElement('div');
+  const container = document.createElement('div');
   container.classList.add('row','card-body','m-0');
 
 
-  let image = document.createElement('img');
+  const image = document.createElement('img');
   image.setAttribute('src',teddy.imageUrl);
   image.classList.add('img-fluid','col-sm-3','p-0','img-basket-product');
 
-  let title = document.createElement('h3');
+  const title = document.createElement('h3');
   title.classList.add('col-sm-3','my-0','align-self-center','p-0','p-sm-2');
   title.textContent = teddy.name;
 
-  let quantityAmount = document.createElement('div');
-  let price = document.createElement('h6');
+  const quantityAmount = document.createElement('div');
+  const price = document.createElement('h6');
   if (teddyQuantity > 1) {
     quantityAmount.classList.add('col-sm-2','col-3','text-sm-end','align-self-center','my-0','p-0','p-sm-2');
     quantityAmount.textContent = formatPrice(teddyQuantity * teddyPrice);
@@ -40,7 +40,7 @@ export const generateBasketProduct = (teddyId, teddyPrice, teddyQuantity) => {
   teddyQuantity > 1 ? price.classList.add('col-sm-3','col-5') : price.classList.add('col-sm-5','col-8')
   price.textContent = teddyQuantity > 1 ? formatPrice(teddyPrice) + ' X' + teddyQuantity : formatPrice(teddyPrice);
 
-  let deleteProduct = document.createElement('button');
+  const deleteProduct = document.createElement('button');
   deleteProduct.setAttribute('id', teddyNumber);
   deleteProduct.classList.add('col-sm-1','col-4','remove-from-cart','align-self-center','btn','text-center','bg-danger','my-0','ms-auto');
   deleteProduct.innerHTML = '<i class="bi bi-trash"></i>';
@@ -67,7 +67,7 @@ export const updateBasketBadge = () => {
  * Generates the basket instance of Basket class with basket info(id, quantity, price) held in localStorage.
  */
 export const generateBasketFromStorage = () => {
-  let storageCart_json = localStorage.getItem("teddiesCartBasket");
+  const storageCart_json = localStorage.getItem("teddiesCartBasket");
   const basket = JSON.parse(storageCart_json);
   if (localStorage.getItem("teddiesCartBasket") !== null) {
     let price = 0;
@@ -84,7 +84,7 @@ export const generateBasketFromStorage = () => {
  * Stores basket content from basket instance to localStorage.
  */
 export const saveBasketToStorage = () => {
-  let storageCart_json = JSON.stringify(teddiesBasket.getTeddies());
+  const storageCart_json = JSON.stringify(teddiesBasket.getTeddies());
   localStorage.setItem("teddiesCartBasket", storageCart_json);
 }
 
@@ -93,7 +93,7 @@ export const saveBasketToStorage = () => {
  */
 export const generateBasket = () => {
   const teddies = teddiesBasket.getTeddies();
-  let articlesInBasket = document.getElementById('articles-in-basket');
+  const articlesInBasket = document.getElementById('articles-in-basket');
   articlesInBasket.innerHTML = "";
   for (const [productId, params] of Object.entries(teddies)) {
     if (productId !== null) {
@@ -111,17 +111,17 @@ export const generateBasket = () => {
  * Generates the total amount card in the basket page with total price.
  */
 export const generateTotalAmount = () => {
-  let total = document.createElement('article');
+  const total = document.createElement('article');
   total.classList.add('row','my-3','mx-0','p-0');
 
-  let container = document.createElement('div');
+  const container = document.createElement('div');
   container.classList.add('row','my-3','mx-0','p-0');
 
-  let title = document.createElement('h3');
+  const title = document.createElement('h3');
   title.classList.add('col-9','p-0');
   title.textContent = 'Montant total de votre panier';
   
-  let price = document.createElement('span');
+  const price = document.createElement('span');
   price.classList.add('col-3','align-self-center','text-end','ms-auto', 'p-0');
   price.textContent = formatPrice(teddiesBasket.getTotalAmount());
 
@@ -130,7 +130,7 @@ export const generateTotalAmount = () => {
 
   total.appendChild(container);
 
-  let totalAmount = document.getElementById('total-amount');
+  const totalAmount = document.getElementById('total-amount');
   totalAmount.innerHTML = "";
   totalAmount.appendChild(total);
 }

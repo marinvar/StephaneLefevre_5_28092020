@@ -35,7 +35,7 @@ export const removeFromCartEventListener = (productId, teddyNumber) => {
     updateBasketBadge();
     basketAlertMsg('danger', 'Il est triste !', 'Votre ex-nouvel ami a été retiré de votre panier...');
   }
-  let button = document.getElementById(teddyNumber);
+  const button = document.getElementById(teddyNumber);
   button.addEventListener('click', setProductId);
 }
 
@@ -56,7 +56,7 @@ export const addProductCardListener = (article) => {
  */
 export const addRegexControlListener = (element, regX) => {
   element.addEventListener('input', function (event) {
-    let result = regX.exec(event.target.value);
+    const result = regX.exec(event.target.value);
     if (result === null) {
       element.classList.add('is-invalid');
     } else if (result !== null && element.classList.contains('is-invalid')) {
