@@ -1,10 +1,9 @@
 # StephaneLefevre_5_28092020
 
 instructions of use : \
-Clone API repository from \
-https://github.com/OpenClassrooms-Student-Center/JWDP5.git \
+Clone API repository from https://github.com/OpenClassrooms-Student-Center/JWDP5.git \
 from directory, run "npm install" \
-run server API entering command "node server" 
+run server API running command "node server" 
 
 clone this repository \
 from directory, run "npm install" \
